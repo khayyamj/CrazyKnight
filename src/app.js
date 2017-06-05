@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Board from './Knight/board'
+import { observe } from './Knight/game'
 import './Knight/Knight.scss'
 
-ReactDOM.render(
-  <Board knightPosition={[7, 4]} />,
-  document.getElementById('root')
+observe(knightPosition =>
+  ReactDOM.render(
+    <Board knightPosition={knightPosition} />,
+    document.getElementById('root')
+  )
 )
