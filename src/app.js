@@ -1,8 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './app.scss'
+// import Knight from './Knight/knight'
+// import Square from './Knight/square'
+import Board from './Knight/board'
+import './Knight/Knight.scss'
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  // <Square black>
+  //   <Knight />
+  // </Square>,
+  <Board knightPosition={[0, 0]} />,
   document.getElementById('root')
 )
