@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import Square from './square'
 import Knight from './knight'
 import { canMoveKnight, moveKnight } from './game'
+import { DragDropContext } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
 
-export default class Board extends Component {
+class Board extends Component {
   renderSquare (i) {
     const x = i % 8
     const y = Math.floor(i / 8)
@@ -57,3 +59,5 @@ Board.propTypes = {
     PropTypes.number.isRequired
   ).isRequired
 }
+
+export default DragDropContext(HTML5Backend)(Board)
